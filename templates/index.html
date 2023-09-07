@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melanoma Survival Prediction</title>
+</head>
+
+<body>
+    <h1>Melanoma Survival Prediction</h1>
+    <form action="/predict" method="POST">
+        <label for="l1">Lymphocytes around tumor (1,2,3):</label><br>
+        <input type="text" id="l1" name="l1"><br>
+        <label for="l2">Lymphocytes in tumor (1,2,3):</label><br>
+        <input type="text" id="l2" name="l2"><br>
+        <label for="l3">Lymphocytes far from node (1,2,3):</label><br>
+        <input type="text" id="l3" name="l3"><br>
+        <label for="t1">Mast cells around tumor (1,2,3):</label><br>
+        <input type="text" id="t1" name="t1"><br>
+        <label for="n1">Neutrophils:</label><br>
+        <input type="text" id="n1" name="n1"><br>
+        <label for="p1">Plasmocytes:</label><br>
+        <input type="text" id="p1" name="p1"><br>
+        <label for="m1">Myeloid cells:</label><br>
+        <input type="text" id="m1" name="m1"><br>
+        <label for="e1">Eosinophils:</label><br>
+        <input type="text" id="e1" name="e1"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if prediction_month %}
+    <h2>Prediction: {{ prediction_month }} months and {{ prediction_days }} days</h2>
+    {% endif %}
+</body>
+
+</html>

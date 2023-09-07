@@ -1,0 +1,1 @@
+conda create -n cox_lifelen_uvenal_melanom lifelines click numpy "pandas<2.0"
